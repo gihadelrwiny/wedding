@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ahmed &amp;Hager — 30.11.2026</title>
+<meta name="description" content="Ahmed &Hager are getting married. Save the date — 30 November 2026, The Moonhouse Estate." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<noscript><style>.intro-gate{display:none!important}</style></noscript>
+</head>
+<body>
+
+<!-- INTRO GATE: envelope opening + chat reveal -->
+<div class="intro-gate" id="introGate">
+  <button type="button" class="intro-skip" id="introSkip">Skip intro</button>
+
+  <!-- Stage 1 — Envelope -->
+  <div class="stage stage-envelope" id="stageEnvelope">
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Tap to open your invitation">
+      <div class="envelope-glow" aria-hidden="true"></div>
+      <div class="envelope-back" aria-hidden="true"></div>
+      <div class="envelope-letter" aria-hidden="true">M &amp; N</div>
+      <div class="envelope-front" aria-hidden="true"></div>
+      <div class="envelope-flap" aria-hidden="true"></div>
+      <div class="envelope-seal" aria-hidden="true">A·H</div>
+    </div>
+    <p class="envelope-cue">tap to open</p>
+  </div>
+
+  <!-- Stage 2 — Chat reveal -->
+  <div class="stage stage-chat" id="stageChatIn">
+    <div class="chat-window">
+      <div class="chat-header">
+        <div class="chat-avatar">H</div>
+        <div>
+          <p class="chat-name">Hager
+          </p>
+          <p class="chat-status">online</p>
+        </div>
+      </div>
+      <div class="chat-body" id="chatBodyIn"></div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  try{
+    if(sessionStorage.getItem('mn-invite-seen')){
+      var g=document.getElementById('introGate');
+      if(g) g.style.display='none';
+    } else {
+      document.body.classList.add('gate-active');
+    }
+  }catch(e){ document.body.classList.add('gate-active'); }
+})();
+</script>
+
+<!-- YOU ARE INVITED -->
+<section class="section invited text-center reveal-section" id="invited">
+  <div class="botanical botanical-left" aria-hidden="true">
+    <svg viewBox="0 0 200 500" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 10 C 95 100, 105 200, 100 490" fill="none" stroke="currentColor" stroke-width="2"/>
+      <g stroke="currentColor" stroke-width="2" fill="none">
+        <ellipse cx="70" cy="60" rx="28" ry="12" transform="rotate(-30 70 60)"/>
+        <ellipse cx="130" cy="90" rx="28" ry="12" transform="rotate(30 130 90)"/>
+        <ellipse cx="65" cy="150" rx="30" ry="13" transform="rotate(-25 65 150)"/>
+        <ellipse cx="135" cy="180" rx="30" ry="13" transform="rotate(25 135 180)"/>
+        <ellipse cx="68" cy="250" rx="32" ry="14" transform="rotate(-28 68 250)"/>
+        <ellipse cx="132" cy="280" rx="32" ry="14" transform="rotate(28 132 280)"/>
+        <ellipse cx="70" cy="350" rx="30" ry="13" transform="rotate(-25 70 350)"/>
+        <ellipse cx="130" cy="380" rx="30" ry="13" transform="rotate(25 130 380)"/>
+        <ellipse cx="75" cy="440" rx="26" ry="11" transform="rotate(-22 75 440)"/>
+        <ellipse cx="125" cy="460" rx="24" ry="10" transform="rotate(22 125 460)"/>
+      </g>
+    </svg>
+  </div>
+  <div class="botanical botanical-right" aria-hidden="true">
+    <svg viewBox="0 0 200 500" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 10 C 95 100, 105 200, 100 490" fill="none" stroke="currentColor" stroke-width="2"/>
+      <g stroke="currentColor" stroke-width="2" fill="none">
+        <ellipse cx="70" cy="60" rx="28" ry="12" transform="rotate(-30 70 60)"/>
+        <ellipse cx="130" cy="90" rx="28" ry="12" transform="rotate(30 130 90)"/>
+        <ellipse cx="65" cy="150" rx="30" ry="13" transform="rotate(-25 65 150)"/>
+        <ellipse cx="135" cy="180" rx="30" ry="13" transform="rotate(25 135 180)"/>
+        <ellipse cx="68" cy="250" rx="32" ry="14" transform="rotate(-28 68 250)"/>
+        <ellipse cx="132" cy="280" rx="32" ry="14" transform="rotate(28 132 280)"/>
+        <ellipse cx="70" cy="350" rx="30" ry="13" transform="rotate(-25 70 350)"/>
+        <ellipse cx="130" cy="380" rx="30" ry="13" transform="rotate(25 130 380)"/>
+        <ellipse cx="75" cy="440" rx="26" ry="11" transform="rotate(-22 75 440)"/>
+        <ellipse cx="125" cy="460" rx="24" ry="10" transform="rotate(22 125 460)"/>
+      </g>
+    </svg>
+  </div>
+  <div class="container invited-content">
+    <p class="invited-eyebrow reveal">A WEDDING CELEBRATION</p>
+    <h2 class="invited-title reveal">You are invited!</h2>
+    <p class="invited-sub reveal">Two families, one love story — and a celebration we can&rsquo;t wait to share with you.</p>
+  </div>
+</section>
+
+<!-- HERO -->
+<section class="section hero text-center reveal-section">
+  <div class="container" data-aos>
+    <p class="script-lg">we&rsquo;re getting married</p>
+    <h1 class="display-name">Ahmed <span class="amp">&amp;</span><br>Hager</h1>
+    <div class="date-row">
+      <span class="dash"></span>
+      <span class="date-text">3 0 &nbsp;.&nbsp; 1 1 &nbsp;.&nbsp; 2 0 2 6</span>
+      <span class="dash"></span>
+    </div>
+    <a href="#venue" class="btn btn-pill mt-4">Save the Date <i class="bi bi-arrow-right ms-2"></i></a>
+
+    <div class="photo-stack mt-5">
+      <div class="photo photo-a">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Couple selfie">
+      </div>
+      <div class="photo photo-b">
+        <img src="https://images.unsplash.com/photo-1525258946800-98cfd641d0de?w=800&q=80" alt="Couple celebrating">
+      </div>
+    </div>
+
+    <p class="scroll-cue mt-5">SCROLL <i class="bi bi-arrow-down"></i></p>
+  </div>
+</section>
+
+<!-- SAVE THE DATE -->
+<section class="section save-date text-center reveal-section">
+  <div class="container">
+    <h2 class="std-title">SAVE <span class="std-the">the</span>DATE!</h2>
+    <div class="couple-illustration my-4">
+      <svg viewBox="0 0 400 430" xmlns="http://www.w3.org/2000/svg" aria-label="Bride and groom illustration">
+        <!-- Bride veil, faint -->
+        <path d="M126 68 C 98 112, 92 200, 108 282" fill="none" stroke="#111" stroke-width="1.5" opacity="0.35"/>
+        <!-- Bride dress -->
+        <path d="M148 96
+                 C 116 100, 98 130, 101 166
+                 C 103 192, 116 206, 111 222
+                 L 88 402
+                 C 130 418, 176 418, 212 402
+                 L 189 222
+                 C 184 206, 197 192, 199 166
+                 C 202 130, 182 100, 148 96 Z"
+              fill="#fff" stroke="#111" stroke-width="2"/>
+        <!-- Bride head -->
+        <circle cx="148" cy="74" r="22" fill="#fff" stroke="#111" stroke-width="2"/>
+        <!-- Bride hair -->
+        <path d="M128 64 C 130 48, 168 46, 168 66 C 168 56, 142 50, 128 64Z" fill="#111"/>
+        <circle cx="163" cy="62" r="6" fill="#111"/>
+        <!-- Bride arm toward bouquet -->
+        <path d="M116 198 C 94 212, 80 222, 68 238" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+        <!-- Bouquet -->
+        <g fill="none" stroke="#111" stroke-width="1.5">
+          <circle cx="62" cy="246" r="10"/>
+          <circle cx="76" cy="238" r="9"/>
+          <circle cx="56" cy="232" r="8"/>
+          <circle cx="73" cy="254" r="7"/>
+        </g>
+        <line x1="66" y1="260" x2="80" y2="300" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Joined hands -->
+        <circle cx="160" cy="220" r="5" fill="#111"/>
+
+        <!-- Groom arm toward bride -->
+        <path d="M222 200 C 200 210, 178 216, 160 220" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+        <!-- Groom suit -->
+        <path d="M262 96
+                 C 230 100, 210 122, 215 152
+                 L 223 212
+                 L 204 402
+                 C 240 418, 286 418, 322 402
+                 L 303 212
+                 L 311 152
+                 C 316 122, 294 100, 262 96 Z"
+              fill="#111"/>
+        <!-- Groom lapels -->
+        <path d="M240 132 L 262 168 L 249 112 Z" fill="#fff"/>
+        <path d="M284 132 L 262 168 L 275 112 Z" fill="#fff"/>
+        <!-- Groom bow tie -->
+        <circle cx="262" cy="120" r="4" fill="#fff"/>
+        <!-- Groom head -->
+        <circle cx="262" cy="72" r="21" fill="#111"/>
+      </svg>
+    </div>
+    <hr class="thin-rule">
+    <p class="couple-line">Ahmed &nbsp;+&nbsp;Hager</p>
+    <p class="couple-date">30 . 11 . 2026</p>
+  </div>
+</section>
+
+<!-- VENUE -->
+<section id="venue" class="section venue text-white reveal-section">
+  <div class="venue-overlay"></div>
+  <div class="container venue-content">
+    <h2 class="venue-title">Under one<br><em>very full</em> moon.</h2>
+    <p class="venue-label">VENUE</p>
+    <p class="venue-value">The Moonhouse Estate</p>
+    <p class="venue-label">WHEN</p>
+    <p class="venue-value">30 Nov 2026 · 6pm</p>
+    <p class="venue-label">DRESS</p>
+    <p class="venue-value">Soft pastels</p>
+    <a class="btn btn-outline-pill mt-4" href="https://maps.google.com" target="_blank" rel="noopener">OPEN IN MAPS <i class="bi bi-arrow-up-right ms-2"></i></a>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="section program text-center reveal-section">
+  <div class="container">
+    <h2 class="serif-title">The program</h2>
+    <div class="program-list mt-5">
+      <div class="program-item">
+        <p class="time"><em>4:30 PM</em></p>
+        <p class="prog-title">WELCOME &amp; ARRIVALS</p>
+        <p class="prog-sub">Sip something cold, find your seat.</p>
+      </div>
+      <div class="program-item">
+        <p class="time"><em>6:00 PM</em></p>
+        <p class="prog-title">THE CEREMONY</p>
+        <p class="prog-sub">Where the forever part happens.</p>
+      </div>
+      <div class="program-item">
+        <p class="time"><em>8:00 PM</em></p>
+        <p class="prog-title">DINNER UNDER THE STARS</p>
+        <p class="prog-sub">Three courses, many speeches. Because love makes you hungry.</p>
+      </div>
+    </div>
+    <p class="script-md mt-5">Stay as late as your heart wants <span class="floret">✿</span></p>
+  </div>
+</section>
+
+<!-- MOMENTS -->
+<section class="section moments text-white reveal-section">
+  <div class="container">
+    <h2 class="serif-title text-white">Momories Of Us</h2>
+    <p class="moments-sub">A love letter, in fragments. Tap, hover, linger.</p>
+    <div class="row g-3 mt-4">
+      <div class="col-6 col-md-4"><div class="frame"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt=""></div></div>
+      <div class="col-6 col-md-4"><div class="frame"><img src="https://images.unsplash.com/photo-1525258946800-98cfd641d0de?w=600&q=80" alt=""></div></div>
+      <div class="col-6 col-md-4"><div class="frame"><img src="https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=600&q=80" alt=""></div></div>
+      <div class="col-6 col-md-4"><div class="frame"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt=""></div></div>
+      <div class="col-6 col-md-4"><div class="frame"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&q=80" alt=""></div></div>
+      <div class="col-6 col-md-4"><div class="frame"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" alt=""></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section countdown text-center reveal-section">
+  <div class="container">
+    <h2 class="serif-title">Counting the days</h2>
+    <div class="row g-3 mt-4 justify-content-center" id="cd">
+      <div class="col-6 col-md-3"><div class="cd-card"><p class="cd-num" id="cd-d">--</p><p class="cd-label">DAYS</p></div></div>
+      <div class="col-6 col-md-3"><div class="cd-card"><p class="cd-num" id="cd-h">--</p><p class="cd-label">HOURS</p></div></div>
+      <div class="col-6 col-md-3"><div class="cd-card"><p class="cd-num" id="cd-m">--</p><p class="cd-label">MINUTES</p></div></div>
+      <div class="col-6 col-md-3"><div class="cd-card"><p class="cd-num" id="cd-s">--</p><p class="cd-label">SECONDS</p></div></div>
+    </div>
+    <p class="script-md mt-5">Until forever begins <span class="floret">✿</span></p>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="section closing text-center reveal-section">
+  <div class="container">
+    <hr class="thin-rule short">
+    <h3 class="closing-title">We&rsquo;re so excited to see you!</h3>
+    <p class="closing-text"><em>Our next chapter starts with all of you beside us. See you on our special day.</em></p>
+  </div>
+</section>
+<section class="section rsvp-scope" id="rsvp">
+ <div class="rsvp-card">
+  
+  <div class="rsvp-header reveal-section" data-delay="0">
+    <p class="rsvp-eyebrow">RSVP</p>
+    <h2 class="rsvp-title">Save us a seat?</h2>
+    <p class="rsvp-sub">make memory with us to that special day ✿</p>
+  </div>
+
+  <form id="weddingRsvpForm">
+    <input type="hidden" name="access_key" value="943a49c8-d615-4a80-829a-ea2f50017f90">
+
+    <div class="rsvp-field reveal-section" data-delay="80">
+      <label class="rsvp-label">YOUR NAME</label>
+      <input type="text" id="rsvpName" name="Guest_Name" class="rsvp-input" placeholder="Your beautiful name...">
+    </div>
+
+    <div class="rsvp-field reveal-section" data-delay="160">
+      <label class="rsvp-label">ATTENDANCE</label>
+      <div class="rsvp-pills">
+        <button type="button" class="rsvp-pill" id="btnComing" data-value="coming">I'm Coming 💛</button>
+        <button type="button" class="rsvp-pill" id="btnSending" data-value="sending">Sending Love 🤍</button>
+      </div>
+      <input type="hidden" id="rsvpAttendance" name="Attendance_Status">
+    </div>
+
+    <div class="rsvp-field reveal-section" data-delay="320">
+      <label class="rsvp-label">MESSAGE TO THE COUPLE</label>
+      <textarea id="rsvpMessage" name="Guest_Message" class="rsvp-textarea" placeholder="Words from the heart..."></textarea>
+    </div>
+
+    <div class="rsvp-field reveal-section" data-delay="480" id="rsvpActionArea">
+      <button type="submit" class="rsvp-submit" id="btnRsvpSubmit" disabled>Confirm With Love</button>
+      <p class="rsvp-success" id="rsvpSuccessMsg" style="display: none;">🤍 Thank you — we can't wait to celebrate with you!</p>
+    </div>
+
+  </form>
+</div>
+</section>
+
+<!-- CHAT OUTRO -->
+<section class="section chat-outro text-center reveal-section" id="chatOutro">
+  <div class="container">
+    <p class="script-lg reveal">one more thing before you go</p>
+    <div class="chat-window chat-window-outro reveal">
+      <div class="chat-header">
+        <div class="chat-avatar">M</div>
+        <div>
+          <p class="chat-name">Ahmed</p>
+          <p class="chat-status">online</p>
+        </div>
+      </div>
+      <div class="chat-body chat-body-static">
+        <div class="msg msg-out show">save the date, we mean it 😅</div>
+        <div class="msg msg-out show">30 . 11 . 2026 — The Moonhouse Estate</div>
+        <div class="msg msg-in show">wouldn&rsquo;t miss it for the world 🤍</div>
+        <div class="chat-cta-wrap show">
+          <a href="#venue" class="chat-cta-btn">View the details <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <p class="chat-receipt">Delivered <span aria-hidden="true">✓✓</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer text-center text-white">
+  <div class="container">
+    <h2 class="footer-name">Ahmed <span class="amp">&amp;</span>Hager</h2>
+    <p class="footer-date">3 0 &nbsp;.&nbsp; 1 1 &nbsp;.&nbsp; 2 0 2 6</p>
+    <p class="footer-by">CREATED WITH <i class="bi bi-heart-fill text-danger"></i></p>
+    <div class="socials">
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
